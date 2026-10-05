@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>爱情讯息</title>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;
+       background:linear-gradient(135deg,#050509,#0b0b13,#050509);
+       font-family:"Songti SC",serif;color:#fff}
+  .p{width:min(90vw,360px);padding:26px 24px;border-radius:24px;text-align:center;
+     background:rgba(255,255,255,.07);border:1px solid rgba(255,215,130,.4);
+     box-shadow:0 20px 60px rgba(0,0,0,.6);backdrop-filter:blur(14px)}
+  h1{font-size:24px;letter-spacing:.1em;margin:0 0 6px;
+     background:linear-gradient(135deg,#fff7d6,#ffd36a,#b8860b);
+     -webkit-background-clip:text;background-clip:text;color:transparent}
+  p{margin:0 0 18px;font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.2em}
+  audio{width:100%;border-radius:999px;outline:none}
+</style>
+</head>
+<body>
+  <div class="p">
+    <h1>爱情讯息</h1>
+    <p>单曲播放</p >
+    <audio src="love-message.mp3" controls autoplay loop preload="auto"></audio>
+  </div>
+</body>
+</html>
