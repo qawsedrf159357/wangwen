@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>爱你哦</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>爱你哦 · 爱情讯息</title>
 <style>
-  body{background:#111;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;font-family:sans-serif;}
-  .heart{color:#ff4d6d;font-size:80px;animation:beat 1s infinite;}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;
+       background:linear-gradient(135deg,#050509,#0b0b13,#050509);
+       font-family:"Songti SC",serif;color:#fff}
+  .wrap{display:flex;flex-direction:column;align-items:center;gap:24px}
+
+  /* 心跳文字 */
+  .heart{color:#ff4d6d;font-size:64px;letter-spacing:.06em;
+         text-shadow:0 0 24px rgba(255,77,109,.65);
+         animation:beat 1s infinite}
   @keyframes beat{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
+
+  /* 音乐卡片 */
+  .p{width:min(90vw,360px);padding:26px 24px;border-radius:24px;text-align:center;
+     background:rgba(255,255,255,.07);border:1px solid rgba(255,215,130,.4);
+     box-shadow:0 20px 60px rgba(0,0,0,.6);backdrop-filter:blur(14px)}
+  h1{font-size:24px;letter-spacing:.1em;margin:0 0 6px;
+     background:linear-gradient(135deg,#fff7d6,#ffd36a,#b8860b);
+     -webkit-background-clip:text;background-clip:text;color:transparent}
+  p{margin:0 0 18px;font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.2em}
+  audio{width:100%;border-radius:999px;outline:none}
 </style>
 </head>
 <body>
-  <div class="heart">❤ 爱你哦 ❤</div>
+  <div class="wrap">
+    <div class="heart">❤ 爱你哦 ❤</div>
+
+    <div class="p">
+      <h1>爱情讯息</h1>
+      <p>单曲播放</p>
+      <audio src="love-message.mp3" controls autoplay loop preload="auto"></audio>
+    </div>
+  </div>
 </body>
 </html>
