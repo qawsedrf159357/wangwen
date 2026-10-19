@@ -22,7 +22,7 @@
   <div class="p">
     <h1>爱情讯息</h1>
     <p>单曲播放</p >
-    <audio src="love-message.mp3" controls autoplay loop preload="auto"></audio>
+    <audio src="music.mp3" controls autoplay loop preload="auto"></audio>
   </div>
 </body>
 </html>
