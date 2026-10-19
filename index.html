@@ -1,15 +1,67 @@
-DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>爱你哦</title>
 <style>
-  body{background:#111;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;font-family:sans-serif;}
-  .heart{color:#ff4d6d;font-size:80px;animation:beat 1s infinite;}
-  @keyframes beat{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:#111;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  font-family:sans-serif;
+}
+/* 这一块完完全全就是你写的爱心动画，一点没动 */
+.heart{
+  color:#ff4d6d;
+  font-size:80px;
+  animation:beat 1s infinite;
+  margin-bottom:40px;
+}
+@keyframes beat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+}
+/* 播放器样式 */
+audio{
+  width:82%;
+  max-width:330px;
+  border-radius:999px;
+}
+.tips{
+  color:#999;
+  margin-top:14px;
+  font-size:13px;
+}
 </style>
 </head>
 <body>
-  <div class="heart">❤ 爱你哦 ❤</div>
+
+<div class="heart">❤ 爱你哦 ❤</div>
+
+<!-- 看得见的播放器 -->
+<audio id="player" controls loop preload="auto">
+  <source src="love.mp3" type="audio/mpeg">
+  你的浏览器不支持音频
+
+<p class="tips">点页面或者播放器播放音乐</p >
+
+<script>
+// 解决浏览器不让自动播放的限制
+const player = document.getElementById('player');
+let isPlay = false;
+document.body.addEventListener('click',()=>{
+  if(!isPlay){
+    player.play().catch(()=>{});
+    isPlay = true;
+  }
+},{once:true});
+</script>
+
 </body>
 </html>
