@@ -16,7 +16,7 @@ body{
   margin:0;
   font-family:sans-serif;
 }
-/* 这一块完完全全就是你写的爱心动画，一点没动 */
+/* 你的跳动爱心，完全保留 */
 .heart{
   color:#ff4d6d;
   font-size:80px;
@@ -27,7 +27,7 @@ body{
   0%,100%{transform:scale(1);}
   50%{transform:scale(1.2);}
 }
-/* 播放器样式 */
+/* 播放器美化 */
 audio{
   width:82%;
   max-width:330px;
@@ -44,15 +44,15 @@ audio{
 
 <div class="heart">❤ 爱你哦 ❤</div>
 
-<!-- 看得见的播放器 -->
+<!-- 爱情讯息 播放器 -->
 <audio id="player" controls loop preload="auto">
-  <source src="love.mp3" type="audio/mpeg">
+  <source src="love-message.mp3" type="audio/mpeg">
   你的浏览器不支持音频
 
-<p class="tips">点页面或者播放器播放音乐</p >
+<p class="tips">点页面或者播放器播放《爱情讯息》</p >
 
 <script>
-// 解决浏览器不让自动播放的限制
+// 浏览器禁止自动播放，点击页面才会响音乐
 const player = document.getElementById('player');
 let isPlay = false;
 document.body.addEventListener('click',()=>{
